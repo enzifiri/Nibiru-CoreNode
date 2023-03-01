@@ -4,9 +4,11 @@
 
 ![nibiru](https://user-images.githubusercontent.com/76253089/222176097-583a0546-8108-47b9-a0b6-93c09e557676.jpg)
 
-
+<h3>
+  
 Herhangi bir sorunla karşılaşırsanız Telegram Sohbet Grubumuza bekleriz [Core Node Chat](https://t.me/corenodechat)
-
+  
+</h3>
   
 </div>
 
@@ -48,6 +50,15 @@ Cüzdan Olusturma (Seedlerini bi yere not edin)
 ```
 nibid keys add wallet
 ```
+
+## Faucet 
+Alttaki Linke tıklayın ve oluşturuduğunuz/import ettiğiniz cüzdanı bağlayın ve tokenleri talep edin.
+<h2>
+  
+[FAUCET LİNKİ](https://app.nibiru.fi/faucet)
+
+</h2>
+
 ![bosline](https://user-images.githubusercontent.com/76253089/222183385-67ecc109-4c08-412f-8ab9-35cba611e288.jpg)
 
 ### Nodeumuzun güncel bloğa erişmesini bekleyelim. Logları kontrol etmek isterseniz
@@ -123,7 +134,7 @@ nibid tx staking unbond nibivaloper1wznwkv8m309d25n8k2lu9ayzeyq7ln9f69u3jc 10000
 ```
 
 # 3) Validatör Olun (75 Puan / Jail Olmazsan Bonus 50 Puan)
-## Validatörümü olusturduk 75 puan cepte. Aktif veya İnaktifin hiç bir önemi yokç
+## Validatörümüzü olusturduk 75 puan cepte. Aktif veya İnaktifin hiç bir önemi yok.
 
 # 4) Oracle Görevi (200 Puan / ZOR)
 ## En az 10k TX yapın. (Bunu yapmanın yöntemini araştırıyorum, Çok fazla tokene ihtiyacımız olacak.)
