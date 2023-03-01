@@ -42,7 +42,7 @@ source <(curl -s https://raw.githubusercontent.com/enzifiri/core-node/main/cosmo
 
 ## Kurulum bittikten sonra Cüzdan Import Etme / Oluşturma
 
-Import 
+Import (Daha önceden cüzdan adresi oluşturduysanız bu komutu kullanın.)
 ```
 nibid keys add wallet --recover
 ```
