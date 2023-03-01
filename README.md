@@ -10,6 +10,8 @@ Herhangi bir sorunla karşılaşırsanız Telegram Sohbet Grubumuza bekleriz [Co
   
 </div>
 
+![node-kurulum-aşaması](https://user-images.githubusercontent.com/76253089/222183148-f5c0411e-4f63-4599-96bf-3f8d7ab62e53.jpg)
+
 ### Sunucuyu Güncelleyerek Başlayalım
 ```
 sudo apt update 
@@ -34,7 +36,8 @@ sudo ufw enable
 ```
 source <(curl -s https://raw.githubusercontent.com/enzifiri/core-node/main/cosmos-scripts/kurulum.sh)
 ```
-------------
+![bosline](https://user-images.githubusercontent.com/76253089/222183268-6fb83660-5f9a-45bc-a1fe-1d7beb5ed361.jpg)
+
 ## Kurulum bittikten sonra Cüzdan Import Etme / Oluşturma
 
 Import 
@@ -45,7 +48,8 @@ Cüzdan Olusturma (Seedlerini bi yere not edin)
 ```
 nibid keys add wallet
 ```
-------------
+![bosline](https://user-images.githubusercontent.com/76253089/222183385-67ecc109-4c08-412f-8ab9-35cba611e288.jpg)
+
 ### Nodeumuzun güncel bloğa erişmesini bekleyelim. Logları kontrol etmek isterseniz
 ```
 sudo journalctl -u nibid -f --no-hostname -o cat
@@ -66,17 +70,67 @@ sudo journalctl -u nibid -f --no-hostname -o cat
 ```
 ### Çıktınız Aşağıdaki Gibi ise Nodeunuz başarılı şekilde kurulmuştur. Eşleştikten Sorna Görevleri Yapmaya başlayabilirsiniz. Güncel bloğa aşağıdaki explorerden bakın.
 ![image](https://user-images.githubusercontent.com/76253089/222171711-5a372302-75c9-44f6-8179-0ba54036e7f2.png)
+<h1>
+  
 [Explorer](https://nibiru.explorers.guru/)
+  
+</h1>
+
+![görevrehberi](https://user-images.githubusercontent.com/76253089/222183814-65b884b0-4d07-465b-8f8a-54ac8d6a6137.jpg)
 
 # Görevler (NODEUNUZ EŞLEŞİP GÜNCEL BLOĞA ERİŞMEDEN GÖREVLERE BAŞLAMAYIN HATA ALIRSINIZ)
 
-## 1-A Delegate ve Redelegate Görevi (100 Puan)
-Alttaki komutu girdikten sonra 1 Nibi Stake etmiş olacaksınız. (DEĞİŞİKLİK YAPMAYIN)
+## Görevler sırasında muhtemelen şu hatayı alacaksınız çözümü direk söylüyorum
+
+![image](https://user-images.githubusercontent.com/76253089/222180673-dc239cfa-b68b-4781-9a62-8c2b5ff7f15a.png)
+
+"account sequence mismatch, expected 11, got 8: incorrect account sequence" Gibi bi hata alırsanız komutun sonundaki -s 8 etiketini 11 ile değişitirin. Eğer 11 yerine başka sayı verdiyse -s yerine o sayıyı girmeniz gerekiyor.
+
+# 1) Formu doldur (77 Puan)
+Görevleri yapıp node üzerinde kullandığınız cüzdan adresini verin. [GLEAM FORM LİNKİ](https://gleam.io/yW6Ho/nibiru-incentivized-testnet-registration)
+
+![image](https://user-images.githubusercontent.com/76253089/222189011-356f18d1-893f-40a5-a158-5d93ac16b7b6.png)
+
+
+# 2) Delegate, Claim ve Redelegate Görevi (100 Puan)
+
+## DELEGATE  (DEĞİŞİKLİK YAPMAYIN)
 ```
 nibid tx staking delegate nibivaloper10gm4kys9yyrlqpvj05vqvjwvje87gln86t4u6q 1000000unibi --from wallet --chain-id nibiru-itn-1 --fees 100unibi -y -s 8
 ```
-Sonrasında Undelege yapmamız gerekiyor. 1 Nibimizi geri alalım. (DEĞİŞİKLİK YAPMAYIN)
+## CLAİM
+Alttaki linke girin ve Nodedda kullandığınız cüzdan ile Siteye bağlanın. İşaretlediğim yerlere basarak biriken ödüllerinizi Claim edin.
+
+<h1> Site LİNK https://app.nibiru.fi/stake </h1>
+
+![image](https://user-images.githubusercontent.com/76253089/222187928-d796b4aa-39ff-4898-a4e4-5937572f2766.png)
+
+Claim işlemi bu kadardı.
+
+## REDELEGATE (DEĞİŞİKLİK YAPMAYIN, GÖREVLERİ YAPABİLMENİZ İÇİN VALOPERLERİ BEN SEÇTİM)
+```
+nibid tx staking redelegate nibivaloper10gm4kys9yyrlqpvj05vqvjwvje87gln86t4u6q nibivaloper1gc6vpl9j0ty8tkt53787zps9ezc70kj8wv386g 1000000unibi --from wallet --chain-id nibiru-itn-1 --fees 100unibi -y -s 12 --gas 210000
+```
+# 2-B) Oracle'a Stake et Sonrasında Unstake Et (2. görevin devamıdır bu görev 100 puana dahildir.)
+
+## ORACLE DELEGATE  (DEĞİŞİKLİK YAPMAYIN)
+```
+nibid tx staking delegate nibivaloper1u40w3kzng8af0enr5wy7702s20td79g89h2k83 1000000unibi --from wallet --chain-id nibiru-itn-1 --fees 100unibi -y -s 8
+```
+## ORACLE UNDELEGATE  (DEĞİŞİKLİK YAPMAYIN)
 ```
 nibid tx staking unbond nibivaloper1wznwkv8m309d25n8k2lu9ayzeyq7ln9f69u3jc 1000000unibi --from wallet --chain-id nibiru-itn-1 --fees 100unibi -y -s 8
 ```
-## 1-B Oraclea Delege Etme ve Sonrasında Ödülleri Claimleme (Üsttekinin devamı o yüzden aynı puan)
+
+# 3) Validatör Olun (75 Puan / Jail Olmazsan Bonus 50 Puan)
+## Validatörümü olusturduk 75 puan cepte. Aktif veya İnaktifin hiç bir önemi yokç
+
+# 4) Oracle Görevi (200 Puan / ZOR)
+## En az 10k TX yapın. (Bunu yapmanın yöntemini araştırıyorum, Çok fazla tokene ihtiyacımız olacak.)
+
+# 5) Geliştiriciler için (+250 puan)
+Bir hata düzeltmesini depoyla nibirubirleştirme(yeni pencere açar)
+Herhangi bir yolla panik/zincir durmasına neden olun veya test ağını yok edin.
+Depoya bir veri kaynağı katkıda bulununpricefeeder(yeni pencere açar)
+Hata ödülleri hakkında bilgi almak için → bugs@nibiru.fi
+
