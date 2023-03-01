@@ -156,7 +156,7 @@ nibid tx staking unbond nibivaloper1u40w3kzng8af0enr5wy7702s20td79g89h2k83 10000
 ## Validatörümüzü olusturduk 75 puan cepte. Aktif veya İnaktifin hiç bir önemi yok.
 
 # 4) Oracle Görevi (200 Puan / ZOR)
-## En az 10k TX yapın. (Bunu yapmanın yöntemini araştırıyorum, Çok fazla tokene ihtiyacımız olacak.)
+## En az 10k TX yapın. (Aktif Sette Olmanız Gerekiyor)
 
 # 5) Geliştiriciler için (+250 puan)
 Bir hata düzeltmesini depoyla nibirubirleştirme(yeni pencere açar)
