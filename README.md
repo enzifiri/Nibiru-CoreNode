@@ -79,12 +79,31 @@ sudo systemctl restart nibid
 ```
 sudo journalctl -u nibid -f --no-hostname -o cat
 ```
-### Çıktınız Aşağıdaki Gibi ise Nodeunuz başarılı şekilde kurulmuştur. Eşleştikten Sorna Görevleri Yapmaya başlayabilirsiniz. Güncel bloğa aşağıdaki explorerden bakın.
+### Çıktınız Aşağıdaki Gibi ise Nodeunuz başarılı şekilde kurulmuştur. Eşleştikten Sonra Validatör oluşturun sonrasında Görevleri Yapmaya başlayabilirsiniz. Güncel bloğa aşağıdaki explorerden bakın.
 ![image](https://user-images.githubusercontent.com/76253089/222171711-5a372302-75c9-44f6-8179-0ba54036e7f2.png)
 <h1>
   
 [Explorer](https://nibiru.explorers.guru/)
-  
+ 
+## Validatör Olusturma (NODEİSMİGİRİN yazan yere istediğinizi yazın.)
+```
+nibid tx staking create-validator \
+--amount=1000000unibi \
+--pubkey=$(nibid tendermint show-validator) \
+--moniker="NODEİSMİGİRİN" \
+--identity=FFB0AA51A2DF5955 \
+--details="Core Node Member" \
+--chain-id=nibiru-itn-1 \
+--commission-rate=0.10 \
+--commission-max-rate=0.20 \
+--commission-max-change-rate=0.01 \
+--min-self-delegation=1 \
+--from=wallet \
+--gas-prices=0.1unibi \
+--gas-adjustment=1.5 \
+--gas=auto \
+-y
+```
 </h1>
 
 ![görevrehberi](https://user-images.githubusercontent.com/76253089/222183814-65b884b0-4d07-465b-8f8a-54ac8d6a6137.jpg)
