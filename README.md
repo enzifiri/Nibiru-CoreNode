@@ -130,7 +130,7 @@ nibid tx staking delegate nibivaloper1u40w3kzng8af0enr5wy7702s20td79g89h2k83 100
 ```
 ## ORACLE UNDELEGATE  (DEĞİŞİKLİK YAPMAYIN)
 ```
-nibid tx staking unbond nibivaloper1wznwkv8m309d25n8k2lu9ayzeyq7ln9f69u3jc 1000000unibi --from wallet --chain-id nibiru-itn-1 --fees 100unibi -y -s 8
+nibid tx staking unbond nibivaloper1u40w3kzng8af0enr5wy7702s20td79g89h2k83 1000000unibi --from wallet --chain-id nibiru-itn-1 --fees 100unibi -y -s 8
 ```
 
 # 3) Validatör Olun (75 Puan / Jail Olmazsan Bonus 50 Puan)
