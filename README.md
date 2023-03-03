@@ -36,7 +36,7 @@ sudo ufw enable
 
 ### Otomatik Yükleme ile Nibiruyu kuralım
 ```
-wget -q -O nibiru.sh https://api.nodes.guru/nibiru.sh && chmod +x nibiru.sh && sudo /bin/bash nibiru.sh
+curl -s https://raw.githubusercontent.com/enzifiri/core-node/main/cosmos-scripts/kurulum.sh
 ```
 
 ## İşlem bitince alttaki komutu girin
